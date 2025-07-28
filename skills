@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join Scorefield's hybrid tutoring program for digital literacy, coding, AI, data analytics, digital marketing, web development, CRM setup, and digital monetization.">
+    <meta name="keywords" content="tech tutoring, digital literacy, coding, AI, data analytics, digital marketing, web development, CRM, digital monetization">
+    <title>Scorefield Tutoring - Master Digital Skills</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .banner {
+            background: #ffffff;
+            color: #512d7c;
+            text-align: center;
+            padding: 100px 20px;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 2px solid #f2b42c;
+        }
+
+        .banner h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .banner p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .cta-button {
+            background-color: #f2b42c;
+            color: #512d7c;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #e0a31a;
+            transform: scale(1.05);
+        }
+
+        .section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .section h2 {
+            color: #512d7c;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+        }
+
+        .skills-container, .syllabus-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px 10px;
+        }
+
+        .skill-card, .syllabus-card {
+            background-color: #ffffff;
+            border: 2px solid #512d7c;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: left;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .skill-card:hover, .syllabus-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .skill-card h3, .syllabus-card h3 {
+            color: #512d7c;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .skill-card h3 i, .syllabus-card h3 i {
+            color: #f2b42c;
+            margin-right: 10px;
+        }
+
+        .skill-card p, .syllabus-card ul {
+            font-size: 0.95rem;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .syllabus-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .syllabus-card ul li {
+            margin: 8px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .syllabus-card ul li i {
+            color: #f2b42c;
+            margin-right: 10px;
+        }
+
+        .tiers-container, .pricing-container {
+            display: flex;
+            justify-content: flex-start;
+            gap: 20px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding: 20px 10px;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+            scrollbar-width: thin;
+            scrollbar-color: #512d7c #f2f2f2;
+        }
+
+        .tiers-container::-webkit-scrollbar, .pricing-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .tiers-container::-webkit-scrollbar-thumb, .pricing-container::-webkit-scrollbar-thumb {
+            background: #512d7c;
+            border-radius: 10px;
+        }
+
+        .tiers-container::-webkit-scrollbar-track, .pricing-container::-webkit-scrollbar-track {
+            background: #f2f2f2;
+        }
+
+        .tier-card, .pricing-card {
+            background-color: #512d7c;
+            color: #ffffff;
+            border-radius: 10px;
+            width: 280px;
+            min-width: 260px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s ease;
+            scroll-snap-align: center;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .tier-card:hover, .pricing-card:hover {
+            transform: scale(1.05);
+        }
+
+        .tier-card h3, .pricing-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #ffffff;
+        }
+
+        .tier-card ul, .pricing-card ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        .tier-card ul li, .pricing-card ul li {
+            margin: 6px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.3;
+        }
+
+        .tier-card ul li i, .pricing-card ul li i {
+            color: #f2b42c;
+            margin-right: 8px;
+        }
+
+        .tier-card .cta-button, .pricing-card .cta-button {
+            font-size: 0.9rem;
+            padding: 8px 16px;
+        }
+
+        .strategy-section {
+            background-color: #f9f9f9;
+        }
+
+        .schedule-section {
+            background-color: #f2f2f2;
+        }
+
+        .schedule-table {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .schedule-table th, .schedule-table td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .schedule-table th {
+            background-color: #512d7c;
+            color: #ffffff;
+        }
+
+        .schedule-table td {
+            color: #333;
+        }
+
+        .schedule-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .testimonials {
+            background-color: #512d7c;
+            color: #ffffff;
+            padding: 60px 20px;
+            overflow: hidden;
+        }
+
+        .testimonial-slider {
+            display: flex;
+            animation: slide 40s infinite linear;
+            width: calc(280px * 10);
+            gap: 20px;
+        }
+
+        .testimonial {
+            background-color: #ffffff;
+            color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            width: 280px;
+            min-width: 260px;
+            text-align: left;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .testimonial p {
+            font-style: italic;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        .testimonial strong {
+            color: #512d7c;
+        }
+
+        .autotyping {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            font-weight: 800;
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            width: 100%;
+            background-color: #f2f2f2;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .autotyping > .scrolling_text {
+            color: #f2b42c;
+            font-size: 1.2em;
+            font-weight: 700;
+            white-space: nowrap;
+            display: inline-block;
+            animation: scroll 20s linear infinite;
+            animation-delay: 0s;
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-280px * 10 - 20px * 9)); }
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-item h4 {
+            color: #512d7c;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .faq-item p {
+            display: none;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        .faq-item p.active {
+            display: block;
+        }
+
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            overflow: auto;
+            padding: 20px;
+        }
+
+        .popup-form {
+            background: #ffffff;
+            max-width: 500px;
+            width: 100%;
+            max-height: 90vh;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+            position: relative;
+            overflow-y: auto;
+            margin: 20px auto;
+        }
+
+        .popup-form h2 {
+            color: #512d7c;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #512d7c;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .form-group select {
+            appearance: none;
+            background: url('data:image/svg+xml;utf8,<svg fill="%23512d7c" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+        }
+
+        .form-group input:focus, .form-group select:focus {
+            border-color: #f2b42c;
+            outline: none;
+        }
+
+        .popup-form button[type="submit"] {
+            background: #512d7c;
+            color: #ffffff;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .popup-form button[type="submit"]:hover {
+            background: #f2b42c;
+            color: #512d7c;
+        }
+
+        .close-popup {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            color: #512d7c;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .banner h1 {
+                font-size: 1.8rem;
+            }
+
+            .banner p {
+                font-size: 1rem;
+            }
+
+            .section h2 {
+                font-size: 1.5rem;
+            }
+
+            .skill-card, .syllabus-card, .testimonial {
+                padding: 15px;
+            }
+
+            .skill-card h3, .syllabus-card h3 {
+                font-size: 1.2rem;
+            }
+
+            .skill-card p, .syllabus-card ul li, .testimonial p {
+                font-size: 0.9rem;
+            }
+
+            .tier-card, .pricing-card {
+                width: 220px;
+                min-width: 200px;
+                padding: 10px;
+            }
+
+            .tier-card h3, .pricing-card h3 {
+                font-size: 1.3rem;
+            }
+
+            .tier-card ul, .pricing-card ul {
+                font-size: 0.85rem;
+            }
+
+            .tier-card .cta-button, .pricing-card .cta-button {
+                font-size: 0.8rem;
+                padding: 6px 12px;
+            }
+
+            .schedule-table th, .schedule-table td {
+                padding: 8px;
+                font-size: 0.9rem;
+            }
+
+            .popup-form {
+                width: 90%;
+                padding: 20px;
+                max-height: 80vh;
+                margin: 10px auto;
+            }
+
+            .autotyping {
+                font-size: 2.0em;
+                padding: 30px 15px;
+            }
+
+            .autotyping > .scrolling_text {
+                font-size: 1.0em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .banner {
+                padding: 60px 15px;
+                min-height: 300px;
+            }
+
+            .banner h1 {
+                font-size: 1.5rem;
+            }
+
+            .banner p {
+                font-size: 0.9rem;
+            }
+
+            .cta-button {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+
+            .skill-card, .syllabus-card, .testimonial {
+                padding: 12px;
+            }
+
+            .skill-card h3, .syllabus-card h3 {
+                font-size: 1.1rem;
+            }
+
+            .skill-card p, .syllabus-card ul li, .testimonial p {
+                font-size: 0.85rem;
+            }
+
+            .tier-card, .pricing-card {
+                width: 180px;
+                min-width: 160px;
+                padding: 8px;
+            }
+
+            .tier-card h3, .pricing-card h3 {
+                font-size: 1.1rem;
+            }
+
+            .tier-card ul, .pricing-card ul {
+                font-size: 0.75rem;
+            }
+
+            .tier-card .cta-button, .pricing-card .cta-button {
+                font-size: 0.7rem;
+                padding: 5px 10px;
+            }
+
+            .section {
+                padding: 40px 15px;
+            }
+
+            .schedule-table th, .schedule-table td {
+                padding: 6px;
+                font-size: 0.8rem;
+            }
+
+            .popup-form {
+                width: 95%;
+                padding: 15px;
+                max-height: 85vh;
+                margin: 5px auto;
+            }
+
+            .popup-form h2 {
+                font-size: 20px;
+            }
+
+            .form-group label {
+                font-size: 14px;
+            }
+
+            .form-group input, .form-group select {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            .popup-form button[type="submit"] {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+
+            .autotyping {
+                font-size: 1.9em;
+                padding: 20px 10px;
+            }
+
+            .autotyping > .scrolling_text {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="banner" aria-label="Hero section for Scorefield tutoring">
+        <h1>Master Digital Skills with Scorefield Tutoring</h1>
+        <p>I am not just your tutor—I will guide you toward landing your first online job, help you build a professional portfolio, and support you with communication, interview, and resume skills.</p>
+        <button class="cta-button" onclick="showPopup()">Join Now</button>
+    </section>
+
+    <section class="section" id="about">
+        <h2>About My Tutoring Program</h2>
+        <p>I am Scorefield, and my hybrid tutoring program is designed to equip you with in-demand digital skills. I teach through 3 stages in 3 tiers, combining physical classes with live remote sessions via Zoom or Google Meet. I also offer personalized one-on-one coaching, both online and in-person, tailored to your schedule.</p>
+    </section>
+
+    <div class="autotyping" id="career">
+        <span class="scrolling_text">Join me to shape and navigate your tech career. With my extensive expertise, I’ll guide you professionally to success!</span>
+    </div>
+
+    <section class="section strategy-section" id="strategy">
+        <h2>My Training Strategy</h2>
+        <p>My tutoring program is structured in 3 stages to ensure progressive learning and practical application:</p>
+        <div class="syllabus-container">
+            <div class="syllabus-card">
+                <h3><i class="fas fa-book"></i>Stage 1: Digital Literacy</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i>Computer and internet basics</li>
+                    <li><i class="fas fa-check"></i>Software navigation (MS Office, Google Suite)</li>
+                    <li><i class="fas fa-check"></i>Online communication and collaboration tools</li>
+                </ul>
+            </div>
+            <div class="syllabus-card">
+                <h3><i class="fas fa-code"></i>Stage 2: Specialized Skills</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i>Coding (Python, JavaScript, HTML, CSS)</li>
+                    <li><i class="fas fa-check"></i>AI and machine learning basics</li>
+                    <li><i class="fas fa-check"></i>Data analytics with SQL, Power BI, Tableau</li>
+                    <li><i class="fas fa-check"></i>Digital marketing and SEO</li>
+                    <li><i class="fas fa-check"></i>Web design and development</li>
+                    <li><i class="fas fa-check"></i>CRM setup (Salesforce, HubSpot)</li>
+                </ul>
+            </div>
+            <div class="syllabus-card">
+                <h3><i class="fas fa-money-bill-wave"></i>Stage 3: Digital Monetization</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i>Freelancing on platforms like Upwork</li>
+                    <li><i class="fas fa-check"></i>Affiliate marketing and e-commerce</li>
+                    <li><i class="fas fa-check"></i>Content creation and monetization strategies</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="syllabus">
+        <h2>Syllabus Overview</h2>
+        <p>I cover the following digital skills, tailored to your chosen tier:</p>
+        <div class="syllabus-container">
+            <div class="syllabus-card">
+                <h3><i class="fas fa-laptop"></i>Digital Literacy</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i>Computer fundamentals and OS navigation</li>
+                    <li><i class="fas fa-check"></i>Internet safety and browsing</li>
+                    <li><i class="fas fa-check"></i>Using productivity tools (Excel, Word, Google Docs)</li>
+                </ul>
+            </div>
+            <div class="syllabus-card">
+                <h3><i class="fas fa-code"></i>Coding + AI</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i>Python and JavaScript programming</li>
+                    <li><i class="fas fa-check"></i>HTML/CSS for web development</li>
+                    <li><i class="fas fa-check"></i>AI basics with TensorFlow</li>
+                </ul>
+            </div>
+            <div class="syllabus-card">
+                <h3><i class="fas fa-chart-bar"></i>Data Analytics</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i>SQL for database querying</li>
+                    <li><i class="fas fa-check"></i>Data visualization with Power BI and Tableau</li>
+                    <li><i class="fas fa-check"></i>Statistical analysis basics</li>
+                </ul>
+            </div>
+            <div class="syllabus-card">
+                <h3><i class="fas fa-bullhorn"></i>Digital Marketing</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i>SEO and content marketing</li>
+                    <li><i class="fas fa-check"></i>Social media marketing strategies</li>
+                    <li><i class="fas fa-check"></i>Google Ads and analytics</li>
+                </ul>
+            </div>
+            <div class="syllabus-card">
+                <h3><i class="fas fa-globe"></i>Website Design & Development</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i>WordPress and Elementor</li>
+                    <li><i class="fas fa-check"></i>Responsive design with HTML, CSS, JavaScript</li>
+                    <li><i class="fas fa-check"></i>SEO optimization</li>
+                </ul>
+            </div>
+            <div class="syllabus-card">
+                <h3><i class="fas fa-users"></i>CRM Setup & Integration</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i>Salesforce and HubSpot customization</li>
+                    <li><i class="fas fa-check"></i>API integrations</li>
+                    <li><i class="fas fa-check"></i>Workflow automation</li>
+                </ul>
+            </div>
+            <div class="syllabus-card">
+                <h3><i class="fas fa-money-bill-wave"></i>Digital Monetization</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i>Freelancing platforms setup</li>
+                    <li><i class="fas fa-check"></i>Affiliate marketing strategies</li>
+                    <li><i class="fas fa-check"></i>Monetizing digital content</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section schedule-section" id="schedule">
+        <h2>Training Schedule</h2>
+        <p>My hybrid classes combine physical and live remote learning, with flexible one-on-one coaching:</p>
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Details</th>
+                    <th>Schedule</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Group Classes</td>
+                    <td>Physical classes with live Zoom/Google Meet for remote learners</td>
+                    <td>Wednesday, Friday, Saturday, 8 AM - 10 AM</td>
+                </tr>
+                <tr>
+                    <td>One-on-One Coaching</td>
+                    <td>Personalized sessions, online or in-person</td>
+                    <td>By mutual agreement, 1.5 hours/day</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="section" id="tiers">
+        <h2>My Training Tiers</h2>
+        <p>Choose the tier that aligns with your goals. All tiers include hybrid delivery and a certificate of completion.</p>
+        <div class="tiers-container">
+            <div class="tier-card">
+                <h3>Basic Tier</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i>3-month training</li>
+                    <li><i class="fas fa-check"></i>Digital Literacy</li>
+                    <li><i class="fas fa-check"></i>One specialized digital skill</li>
+                    <li><i class="fas fa-check"></i>Digital Monetization</li>
+                    <li><i class="fas fa-check"></i>Certificate</li>
+                </ul>
+                <button class="cta-button" onclick="showPopup()">Choose Basic</button>
+            </div>
+            <div class="tier-card">
+                <h3>Standard Tier</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i>6-month training</li>
+                    <li><i class="fas fa-check"></i>Expanded curriculum</li>
+                    <li><i class="fas fa-check"></i>Two specialized digital skills</li>
+                    <li><i class="fas fa-check"></i>Team projects</li>
+                    <li><i class="fas fa-check"></i>Standard certificate</li>
+                </ul>
+                <button class="cta-button" onclick="showPopup()">Choose Standard</button>
+            </div>
+            <div class="tier-card">
+                <h3>Advanced Tier</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i>6-month training</li>
+                    <li><i class="fas fa-check"></i>Full curriculum access</li>
+                    <li><i class="fas fa-check"></i>1:1 coaching</li>
+                    <li><i class="fas fa-check"></i>Premium tools</li>
+                    <li><i class="fas fa-check"></i>Advanced certificate</li>
+                </ul>
+                <button class="cta-button" onclick="showPopup()">Choose Advanced</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="group-pricing">
+        <h2>Group Learning Pricing</h2>
+        <p>My group learning pricing is affordable and designed for hybrid classes:</p>
+        <div class="pricing-container">
+            <div class="pricing-card">
+                <h3>Basic Tier</h3>
+                <p class="price">₦85,000<span>/program</span></p>
+                <ul>
+                    <li><i class="fas fa-check"></i>3-month group training</li>
+                    <li><i class="fas fa-check"></i>Digital literacy, one specialized digital skill, monetization</li>
+                    <li><i class="fas fa-check"></i>Portfolio building support</li>
+                    <li><i class="fas fa-check"></i>Certificate of completion</li>
+                </ul>
+                <button class="cta-button" onclick="showPopup()">Enroll Now</button>
+            </div>
+            <div class="pricing-card">
+                <h3>Standard Tier</h3>
+                <p class="price">₦170,000<span>/program</span></p>
+                <ul>
+                    <li><i class="fas fa-check"></i>6-month group training</li>
+                    <li><i class="fas fa-check"></i>Two specialized digital skills + team projects</li>
+                    <li><i class="fas fa-check"></i>Portfolio and resume support</li>
+                    <li><i class="fas fa-check"></i>Standard certificate</li>
+                </ul>
+                <button class="cta-button" onclick="showPopup()">Enroll Now</button>
+            </div>
+            <div class="pricing-card">
+                <h3>Advanced Tier</h3>
+                <p class="price">₦320,000<span>/program</span></p>
+                <ul>
+                    <li><i class="fas fa-check"></i>6-month group training</li>
+                    <li><i class="fas fa-check"></i>Full curriculum + 1:1 coaching</li>
+                    <li><i class="fas fa-check"></i>Job interview and portfolio support</li>
+                    <li><i class="fas fa-check"></i>Advanced certificate</li>
+                </ul>
+                <button class="cta-button" onclick="showPopup()">Enroll Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="one-on-one-pricing">
+        <h2>One-on-One Learning Pricing</h2>
+        <p>My one-on-one coaching is personalized and flexible, delivered remotely via Zoom:</p>
+        <div class="pricing-container">
+            <div class="pricing-card">
+                <h3>Basic Tier</h3>
+                <p class="price">₦200,000<span>/program</span></p>
+                <ul>
+                    <li><i class="fas fa-check"></i>3-month training, 1.5 hours/day</li>
+                    <li><i class="fas fa-check"></i>Digital literacy, one specialized digital skill, monetization</li>
+                    <li><i class="fas fa-check"></i>Portfolio building support</li>
+                    <li><i class="fas fa-check"></i>Certificate of completion</li>
+                </ul>
+                <button class="cta-button" onclick="showPopup()">Enroll Now</button>
+            </div>
+            <div class="pricing-card">
+                <h3>Standard Tier</h3>
+                <p class="price">₦350,000<span>/program</span></p>
+                <ul>
+                    <li><i class="fas fa-check"></i>6-month training, 1.5 hours/day</li>
+                    <li><i class="fas fa-check"></i>Two specialized digital skills + custom projects</li>
+                    <li><i class="fas fa-check"></i>Portfolio and resume support</li>
+                    <li><i class="fas fa-check"></i>Standard certificate</li>
+                </ul>
+                <button class="cta-button" onclick="showPopup()">Enroll Now</button>
+            </div>
+            <div class="pricing-card">
+                <h3>Advanced Tier</h3>
+                <p class="price">₦600,000<span>/program</span></p>
+                <ul>
+                    <li><i class="fas fa-check"></i>6-month training, 1.5 hours/day</li>
+                    <li><i class="fas fa-check"></i>Full curriculum access</li>
+                    <li><i class="fas fa-check"></i>Job interview and portfolio support</li>
+                    <li><i class="fas fa-check"></i>Advanced certificate</li>
+                </ul>
+                <button class="cta-button" onclick="showPopup()">Enroll Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <h2>What My Students Say</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial">
+                <p>"Scorefield’s tutoring helped me land my first Upwork gig in web development!"</p>
+                <p><strong>— Chinedu Okeke</strong></p>
+            </div>
+            <div class="testimonial">
+                <p>"The data analytics digital skill gave me the tools to create stunning visualizations."</p>
+                <p><strong>— Aisha Bello</strong></p>
+            </div>
+            <div class="testimonial">
+                <p>"I built my portfolio and got hired thanks to Scorefield’s guidance."</p>
+                <p><strong>— Tunde Adebayo</strong></p>
+            </div>
+            <div class="testimonial">
+                <p>"The digital marketing lessons were practical and easy to apply."</p>
+                <p><strong>— Funmi Adewale</strong></p>
+            </div>
+            <div class="testimonial">
+                <p>"One-on-one coaching helped me master Python in just weeks!"</p>
+                <p><strong>— Emeka Nwosu</strong></p>
+            </div>
+            <div class="testimonial">
+                <p>"Scorefield’s resume tips secured me an online job interview."</p>
+                <p><strong>— Ngozi Eze</strong></p>
+            </div>
+            <div class="testimonial">
+                <p>"The CRM setup digital skill was a game-changer for my freelance work."</p>
+                <p><strong>— Yusuf Ibrahim</strong></p>
+            </div>
+            <div class="testimonial">
+                <p>"I learned how to monetize my content with Scorefield’s strategies."</p>
+                <p><strong>— Chioma Okafor</strong></p>
+            </div>
+            <div class="testimonial">
+                <p>"The hybrid classes were flexible and engaging."</p>
+                <p><strong>— Segun Alabi</strong></p>
+            </div>
+            <div class="testimonial">
+                <p>"Scorefield’s AI digital skill opened new career paths for me."</p>
+                <p><strong>— Amaka Udeh</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <h4 onclick="toggleFAQ(this)">What is the duration of each tier?</h4>
+                <p>Basic Tier is 3 months. Standard and Advanced Tiers are 6 months for both group and one-on-one coaching.</p>
+            </div>
+            <div class="faq-item">
+                <h4 onclick="toggleFAQ(this)">Do I need prior tech experience?</h4>
+                <p>No prior experience is needed. I start with digital literacy to ensure everyone can follow along.</p>
+            </div>
+            <div class="faq-item">
+                <h4 onclick="toggleFAQ(this)">How does the hybrid model work?</h4>
+                <p>Group classes are held physically with live Zoom/Google Meet streaming for remote learners. One-on-one sessions are scheduled flexibly, online or in-person.</p>
+            </div>
+            <div class="faq-item">
+                <h4 onclick="toggleFAQ(this)">What support do I get for job placement?</h4>
+                <p>I help you build a portfolio, craft a resume, and prepare for interviews to land online jobs or freelance gigs.</p>
+            </div>
+            <div class="faq-item">
+                <h4 onclick="toggleFAQ(this)">Can I switch tiers or digital skills?</h4>
+                <p>Yes, you can discuss switching tiers or digital skills with me during the program, based on your progress.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="register" style="background-color: #f2b42c; color: #512d7c;">
+        <h2>Ready to Start Your Learning Journey?</h2>
+        <p>Contact me to enroll in my hybrid tutoring program or schedule one-on-one coaching.</p>
+        <button class="cta-button" style="background-color: #512d7c; color: #ffffff;" onclick="showPopup()">Enroll Now</button>
+    </section>
+
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-form">
+            <span class="close-popup" onclick="closePopup()">×</span>
+            <h2>Enrollment Form</h2>
+            <form id="enrollmentForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="digital-skill">Select Digital Skill:</label>
+                    <select id="digital-skill" name="digital-skill" required>
+                        <option value="" disabled selected>Choose a digital skill</option>
+                        <option value="Digital Literacy">Digital Literacy</option>
+                        <option value="Coding + AI">Coding + AI</option>
+                        <option value="Data Analytics">Data Analytics</option>
+                        <option value="Digital Marketing">Digital Marketing</option>
+                        <option value="Website Design & Development">Website Design & Development</option>
+                        <option value="CRM Setup & Integration">CRM Setup & Integration</option>
+                        <option value="Digital Monetization">Digital Monetization</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="discipline">Discipline of Study:</label>
+                    <input type="text" id="discipline" name="discipline" required>
+                </div>
+                <div class="form-group">
+                    <label for="education">Level of Education:</label>
+                    <select id="education" name="education" required>
+                        <option value="" disabled selected>Select education level</option>
+                        <option value="High School">High School</option>
+                        <option value="Undergraduate">Undergraduate</option>
+                        <option value="Graduate">Graduate</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <button type="submit">Submit Enrollment</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showPopup() {
+            document.getElementById('popupOverlay').style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.getElementById('popupOverlay').style.display = 'none';
+            document.getElementById('enrollmentForm').reset();
+        }
+
+        document.getElementById('enrollmentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const digitalSkill = document.getElementById('digital-skill').value;
+            const discipline = document.getElementById('discipline').value;
+            const education = document.getElementById('education').value;
+            alert(`Thank you, ${name}! Your enrollment for ${digitalSkill} has been submitted. I'll contact you soon via ${email} or ${phone}.`);
+            closePopup();
+        });
+
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            answer.classList.toggle('active');
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const containers = document.querySelectorAll('.tiers-container, .pricing-container');
+            containers.forEach(container => {
+                container.scrollLeft = 0;
+            });
+        });
+    </script>
+</body>
+</html>
